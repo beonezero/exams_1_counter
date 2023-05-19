@@ -1,0 +1,60 @@
+.number {
+    color: red
+}
+
+.counter_wrapper {
+    width: 400px;
+    height: 300px;
+    border: 3px solid #00b3ff;
+    border-radius: 15px;
+    margin: 200px auto;
+    padding: 15px;
+}
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.table_wrapper {
+    background-color: #00b3ff;
+    width: 100%;
+    height: 150px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table_wrapper p {
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.button_wrapper {
+    align-self: center;
+    margin-bottom: 50px;
+    border: 2px solid #00b3ff;
+    border-radius: 5px;
+    width: 365px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button_wrapper button {
+    font-size: 26px;
+    padding: 0 30px;
+    background-color: #48c7ff;
+    border-radius: 5px;
+}
+
+.button {
+    background-color: gray!important;
+}
+
+
+
+
