@@ -33,6 +33,40 @@
     font-weight: 700;
 }
 
+.settings {
+    background-color: #004a94;
+    height: 150px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.settings_block {
+    display: flex;
+    justify-content: start;
+    gap: 100px;
+    align-items: center;
+}
+
+.settings_block input {
+    display: block;
+    max-width: 90px;
+    height: 20px;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.error_input {
+    border: 2px solid red;
+    background-color: #ffb1b1;
+}
+
 .button_wrapper {
     align-self: center;
     margin-bottom: 50px;

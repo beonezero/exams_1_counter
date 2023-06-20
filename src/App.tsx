@@ -3,7 +3,7 @@ import './App.css';
 import Counter from "./Components/Counter";
 
 function App() {
-    let [count, setCount] = useState<number>(0)
+    const [count, setCount] = useState<number>(0)
 
     const changeCount = (counts: number) => {
         setCount(counts)
