@@ -32,18 +32,6 @@
     align-items: center;
 }
 
-.buttons button {
-    font-size: 40px;
-    padding: 0 10px;
-    color: black;
-    background-color: white;
-    font-family: Tahoma, sans-serif;
-}
-
-.buttons button:hover {
-    cursor: pointer;
-}
-
 .table_counter {
     font-size: 104px;
     color: white;
@@ -51,18 +39,6 @@
 
 .table_counter_red {
     color: red;
-}
-
-.incButton {
-
-}
-
-.resetButton:disabled {
-    background-color: #939393;
-}
-
-.incButton:disabled {
-    background-color: #939393;
 }
 
 .error {

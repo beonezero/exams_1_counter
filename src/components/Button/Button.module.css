@@ -1,0 +1,15 @@
+.default {
+    font-size: 40px;
+    padding: 0 10px;
+    color: black;
+    background-color: white;
+    font-family: Tahoma, sans-serif;
+}
+
+.default:hover {
+    cursor: pointer;
+}
+
+.default:disabled {
+    background-color: #939393;
+}

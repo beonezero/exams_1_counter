@@ -1,21 +1,22 @@
 import s from "./Counter.module.css"
+import {Button} from "./Button/Button";
 
 export type CounterType = {
     count: number
-    maxCountValue: number
-    minCountValue: number
-    setCount: (value: number) => void
+    maxValue: number
+    minValue: number
     error: string
-    setError: (error: string) => void
+    resetCounter: () => void
+    incCounter: () => void
 }
 
 export const Counter = (props: CounterType) => {
     const incButtonHandler = () => {
-        props.setCount(props.count + 1)
+        props.incCounter()
     }
 
     const resetButtonHandler = () => {
-        props.setCount(props.minCountValue)
+        props.resetCounter()
     }
 
     return <div className={s.background}>
@@ -24,16 +25,18 @@ export const Counter = (props: CounterType) => {
                 {props.error
                     ? <div className={s.error}>{props.error}</div>
                     : <div
-                        className={`${s.table_counter} ${props.count === props.maxCountValue ? s.table_counter_red : ""}`}>{props.count}</div>
+                        className={`${s.table_counter} ${props.count === props.maxValue ? s.table_counter_red : ""}`}>{props.count}</div>
                 }
             </div>
             <div className={s.buttons}>
-                <button onClick={incButtonHandler} className={s.incButton}
-                        disabled={props.count === props.maxCountValue || !!props.error}>INC
-                </button>
-                <button onClick={resetButtonHandler} disabled={props.count === props.minCountValue || !!props.error}
-                        className={s.resetButton}>RESET
-                </button>
+                <Button onclickHandler={incButtonHandler}
+                        disabled={props.count === props.maxValue || !!props.error}
+                        name={"INC"}
+                />
+                <Button onclickHandler={resetButtonHandler}
+                        disabled={props.count === props.minValue || !!props.error}
+                        name={"RESET"}
+                />
             </div>
         </div>
     </div>

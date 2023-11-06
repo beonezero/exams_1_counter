@@ -56,17 +56,6 @@
     align-items: center;
 }
 
-.buttonSet {
-    font-size: 40px;
-    padding: 0 10px;
-    color: black;
-    background-color: white;
-    font-family: Tahoma, sans-serif;
-}
-
-.buttonSet:disabled {
-    background-color: #939393;
-}
 
 .inputError {
     background-color: #ffbdbd;
