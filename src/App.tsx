@@ -43,7 +43,7 @@ function App() {
             dispatch(setErrorMinInputAC("Min error"))
             dispatch(setErrorMaxInputAC("Max error"))
             dispatch(setErrorAC("Incorrected value"))
-        } else if (minValue < 0 && maxValue >=0) {
+        } else if ((minValue < 0 && maxValue >=0) || (minValue > 0 && maxValue >=0 && minValue > maxValue)) {
             dispatch(setErrorAC("Incorrected min value"))
             dispatch(setErrorMinInputAC("Min error"))
             dispatch(setErrorMaxInputAC(""))

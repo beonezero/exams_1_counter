@@ -45,3 +45,8 @@
     font-size: 30px;
     color: red;
 }
+
+.error_green {
+    font-size: 30px;
+    color: greenyellow;
+}

@@ -23,7 +23,7 @@ export const Counter = (props: CounterType) => {
         <div className={s.wrapper}>
             <div className={s.table}>
                 {props.error
-                    ? <div className={s.error}>{props.error}</div>
+                    ? <div className={props.error === "Please, save settings" ? s.error_green : s.error}>{props.error}</div>
                     : <div
                         className={`${s.table_counter} ${props.count === props.maxValue ? s.table_counter_red : ""}`}>{props.count}</div>
                 }
