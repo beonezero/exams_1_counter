@@ -1,14 +1,18 @@
 import {Counter} from "./components/Counter";
 import {CounterSettings} from "./components/CounterSettings";
 import s from "./App.module.css";
-import {useAppSelector} from "./store";
-import {incrementCountAC, setCountAC, setMaxValueAC, setMinValueAC} from "./reducers/app-reducer";
-import {useDispatch} from "react-redux";
+import {useAppDispatch, useAppSelector} from "./store";
+import {
+    incrementCountAC,
+    setCountAC,
+    setMaxValueAC,
+    setMinValueAC,
+} from "./reducers/app-reducer";
 import {setErrorAC, setErrorMaxInputAC, setErrorMinInputAC} from "./reducers/errors-reducer";
 
 function App() {
 
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
 
     const count = useAppSelector((state) => state.app.count)
     const minValue = useAppSelector((state) => state.app.minValue)
@@ -17,6 +21,11 @@ function App() {
     const error = useAppSelector((state) => state.errors.error)
     const errorMinInput = useAppSelector((state) => state.errors.errorMinInput)
     const errorMaxInput = useAppSelector((state) => state.errors.errorMaxInput)
+
+    // useEffect(() => {
+    //     dispatch(setMinValueFromLocalstorageTC())
+    //     dispatch(setMaxValueFromLocalstorageTC())
+    // },[])
 
     const saveMaxMinValue = () => {
         dispatch(setErrorAC(""))
@@ -33,10 +42,12 @@ function App() {
     const changeMaxValue = (e: string) => {
         dispatch(setErrorAC("Please, save settings"))
         dispatch(setMaxValueAC(Number(e)))
+        // dispatch(saveMaxValueToLocalstorageTC())
     }
     const changeMinValue = (e: string) => {
         dispatch(setErrorAC("Please, save settings"))
         dispatch(setMinValueAC(Number(e)))
+        // dispatch(saveMinValueToLocalstorageTC())
     }
     const minEqualMaxErrorChecking = () => {
         if (minValue === maxValue || (maxValue < 0 && minValue < 0)) {
