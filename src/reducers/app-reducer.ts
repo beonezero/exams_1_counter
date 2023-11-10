@@ -57,8 +57,8 @@ export const setMaxValueAC = (maxValue: number) => ({type: "SET-MAX-VALUE", maxV
 
 // types
 
-type InitialStateType = typeof initialState
-type ActionsType =
+export type InitialStateType = typeof initialState
+export type ActionsType =
     ReturnType<typeof setCountAC>
     | ReturnType<typeof incrementCountAC>
     | ReturnType<typeof setMinValueAC>

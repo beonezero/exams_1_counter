@@ -5,7 +5,7 @@ const initialState = {
 }
 
 // reducer
-export const errorsReducer = (state: InitialStateType = initialState, action: ActionType): InitialStateType => {
+export const errorsReducer = (state: InitialStateErrorsType = initialState, action: ActionType): InitialStateErrorsType => {
     switch (action.type) {
         case "SET-COUNT":
             return {...state, error: action.error}
@@ -25,8 +25,8 @@ export const setErrorMaxInputAC = (errorMaxInput: string) => ({type: "SET-ERROR-
 
 // types
 
-type InitialStateType = typeof initialState
-type ActionType =
+export type InitialStateErrorsType = typeof initialState
+export type ActionType =
     ReturnType<typeof setErrorAC>
     | ReturnType<typeof setErrorMinInputAC>
     | ReturnType<typeof setErrorMaxInputAC>
